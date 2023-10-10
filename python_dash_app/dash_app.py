@@ -14,7 +14,7 @@ def calculate_distance(array1, array2):
     input_data += " ".join(map(str, array2)) + "\n"
 
     # Execute the C++ program, provide the input and get the output
-    result = subprocess.run(["./cpp_scripts/euclidean.cpp"], input=input_data, text=True, capture_output=True)
+    result = subprocess.run(["cpp_scripts/euclidean.cpp"], input=input_data, text=True, capture_output=True)
     
     # Return the result as a float
     return float(result.stdout.strip())
